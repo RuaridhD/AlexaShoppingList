@@ -1,0 +1,44 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "shopping list",
+      "types": [],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AddIntent",
+          "slots": [
+            {
+              "name": "item",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "quantity",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "add {quantity} of {item}",
+            "add {quantity} {item}",
+            "add {quantity} {item} to my list",
+            "add {quantity} {item} to my shopping list",
+            "add {item}",
+            "add {item} to my list",
+            "add {item} to my shopping list"
+          ]
+        }
+      ]
+    }
+  }
+}
