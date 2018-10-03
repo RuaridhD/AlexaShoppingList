@@ -2,12 +2,16 @@ version: 0.2
 
 phases:
   install:
-    - cd lambda/custom && npm install
+    commands:
+      - printenv
+      - cd lambda/custom && npm install
 
   build:
-    - npm test
-    - run build-aws-resource
+    commands:
+      - npm test
+      - run build-aws-resource
 
   artifacts:
     files:
-      - lambda/custom/ShoppingList.zip
+      - lambda/custom/ShoppingListAWS.zip
+    discard-paths: yes
