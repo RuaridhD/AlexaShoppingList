@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - npm test
-      - run build-aws-resource
+      - npm run build-aws-resource
 
 artifacts:
   files:
