@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build-aws-resource": "pack-zip"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "jest": "^23.6.0",
+    "pack-zip": "^0.2.2",
     "virtual-alexa": "^0.6.6"
   }
 }
