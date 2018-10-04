@@ -1,5 +1,5 @@
 pipeline {
-  agent {dockerfile true}
+  agent any
   options { skipDefaultCheckout()
             disableConcurrentBuilds()
           }
@@ -9,21 +9,21 @@ pipeline {
       steps {
         echo "This is the build stage"
         checkout scm 
-        // sh "cd lambda/custom && npm install"
+        sh "cd lambda/custom && npm install"
       }
     }
-//     stage('Test') {
-//       steps {
-//         echo "This is the Test Stage"
-//         sh  "cd lambda/custom && npm test"
-//       }
-//     }
+    stage('Test') {
+      steps {
+        echo "This is the Test Stage"
+        sh  "cd lambda/custom && npm test"
+      }
+    }
 
-//     stage('Package') {
-//         steps {
-//             echo 'this is the package stage'
-//             sh  "cd lambda/custom && npm run build-aws-resource"
-//       }
-//     }
-//   }
+    stage('Package') {
+        steps {
+            echo 'this is the package stage'
+            sh  "cd lambda/custom && npm run build-aws-resource"
+      }
+    }
+  }
 }
