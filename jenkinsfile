@@ -4,14 +4,14 @@ pipeline {
             disableConcurrentBuilds()
           }
 
-//   stages {
-//     stage('Build') {
-//       steps {
-//         echo "This is the build stage"
-//         checkout scm 
-//         sh "cd lambda/custom && npm install"
-//       }
-//     }
+  stages {
+    stage('Build') {
+      steps {
+        echo "This is the build stage"
+        checkout scm 
+        // sh "cd lambda/custom && npm install"
+      }
+    }
 //     stage('Test') {
 //       steps {
 //         echo "This is the Test Stage"
