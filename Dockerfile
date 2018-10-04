@@ -5,4 +5,4 @@ WORKDIR /newdirectory/lambda/custom
 RUN npm install
 RUN npm test
 WORKDIR /
-RUN tar -zcvf /newdirectory/newdirectory.tar.gz .
+RUN npm run build-aws-resource
